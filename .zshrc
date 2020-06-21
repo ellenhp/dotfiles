@@ -29,15 +29,15 @@ zle -N accept-line _reset-prompt-and-accept-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-
-
 # Variable setup
 export EDITOR=vim
 export PATH=$PATH:~/bin
 
 # Virtualenv setup
 export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+	source /usr/bin/virtualenvwrapper.sh
+fi
 
 # Android setup
 export ANDROID_HOME=$HOME/android-sdk/
