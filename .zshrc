@@ -28,6 +28,8 @@ zle -N accept-line _reset-prompt-and-accept-line
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 # Variable setup
 export EDITOR=vim
