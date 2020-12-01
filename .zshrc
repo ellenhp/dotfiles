@@ -8,8 +8,8 @@ compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
@@ -33,7 +33,6 @@ bindkey "^[[F" end-of-line
 
 # Variable setup
 export EDITOR=vim
-export PATH=$PATH:~/bin
 
 # Virtualenv setup
 export WORKON_HOME=~/.virtualenvs
@@ -43,7 +42,7 @@ fi
 
 # Android setup
 export ANDROID_HOME=$HOME/android-sdk/
-export ANDROID_NDK=$HOME/android-sdk/ndk/21.1.6352462/
+export ANDROID_NDK=$HOME/android-sdk/ndk/21.3.6528147/
 export ANDROID_NDK_HOME=$ANDROID_NDK
 export ANDROID_NDK_ROOT=$ANDROID_NDK
 alias adbwifi="adb tcpip 5555"
@@ -51,3 +50,4 @@ alias adbwifi="adb tcpip 5555"
 # Dotfile sync setup
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+alias yubissh="killall ssh-agent; ssh-add -s /usr/lib/libykcs11.so"
