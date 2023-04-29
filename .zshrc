@@ -18,7 +18,7 @@ parse_git_branch() {
 }
 
 setopt PROMPT_SUBST
-PROMPT='%9c%{%F{green}%} %D{%y/%m/%d %H:%M:%S}%F{red} [$(git symbolic-ref --short HEAD 2> /dev/null)]%{%F{none}%} $ '
+PROMPT='%9c %F{#800080}%n@%M %{%F{green}%}%D{%y/%m/%d %H:%M:%S}%F{red} [$(git symbolic-ref --short HEAD 2> /dev/null)]%{%F{none}%} $ '
 
 function _reset-prompt-and-accept-line {
 	zle reset-prompt
@@ -41,14 +41,5 @@ if [ -f /usr/bin/virtualenvwrapper.sh ]; then
 	source /usr/bin/virtualenvwrapper.sh
 fi
 
-# Android setup
-export ANDROID_HOME=$HOME/android-sdk/
-export ANDROID_NDK=$HOME/android-sdk/ndk/21.3.6528147/
-export ANDROID_NDK_HOME=$ANDROID_NDK
-export ANDROID_NDK_ROOT=$ANDROID_NDK
-alias adbwifi="adb tcpip 5555"
-
 # Dotfile sync setup
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-alias yubissh="killall ssh-agent; ssh-add -s /usr/lib/libykcs11.so"
