@@ -13,15 +13,19 @@ SAVEHIST=10000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-parse_git_branch() {
-	'[[ (git rev-parse --git-dir 2> /dev/null) && " [$(git symbolic-ref --short HEAD 2> /dev/null)]" ]]'
+export CMD_START_TIME=$(date +%s%N | cut -b1-13)
+
+function get_millis() {
+	export CMD_END_TIME=$(date +%s%N | cut -b1-13)
+	export DURATION=$(($CMD_END_TIME - $CMD_START_TIME))
+	echo $DURATION
 }
 
 setopt PROMPT_SUBST
-PROMPT='%9c %F{#800080}%n@%M %{%F{green}%}%D{%y/%m/%d %H:%M:%S}%F{red} [$(git symbolic-ref --short HEAD 2> /dev/null)]%{%F{none}%} $ '
+PROMPT='%9c %F{#800080}%n@%M %{%F{blue}%}$(get_millis)ms %{%F{green}%}%D{%y/%m/%d %H:%M:%S}%F{red} [$(git symbolic-ref --short HEAD 2> /dev/null)]%{%F{none}%} $ '
 
 function _reset-prompt-and-accept-line {
-	zle reset-prompt
+	export CMD_START_TIME=$(date +%s%N | cut -b1-13)
 	zle .accept-line
 }
 zle -N accept-line _reset-prompt-and-accept-line
