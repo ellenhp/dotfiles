@@ -191,11 +191,21 @@ mouse_warping output
 #default_border pixel 3
 
 input 2:10:TPPS/2_Elan_TrackPoint {
-    pointer_accel -0.5 # set mouse sensitivity (between -1 and 1)
+    pointer_accel -0.5
 }
 
 input 1267:12693:ELAN0678:00_04F3:3195_Touchpad {
     natural_scroll enabled
     scroll_factor 0.3
     click_method clickfinger
+}
+
+input 1739:52619:SYNA8006:00_06CB:CD8B_Mouse {
+    pointer_accel -0.2
+}
+
+input 1739:52619:SYNA8006:00_06CB:CD8B_Touchpad {
+    natural_scroll enabled
+    click_method clickfinger
+    scroll_factor 0.5
 }
