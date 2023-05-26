@@ -209,3 +209,12 @@ input 1739:52619:SYNA8006:00_06CB:CD8B_Touchpad {
     click_method clickfinger
     scroll_factor 0.5
 }
+
+output HDMI-A-1 {
+    transform 90
+    scale 2
+}
+
+output DP-1 {
+    scale 2
+}
