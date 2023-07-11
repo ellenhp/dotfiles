@@ -1,0 +1,1 @@
+alias kiosk='sway --config $HOME/.config/sway/kiosk'

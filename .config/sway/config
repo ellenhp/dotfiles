@@ -200,3 +200,9 @@ input 1739:52619:SYNA8006:00_06CB:CD8B_Mouse {
     pointer_accel -0.2
 }
 
+input 1739:52619:SYNA8006:00_06CB:CD8B_Touchpad {
+    natural_scroll enabled
+    click_method clickfinger
+    scroll_factor 0.5
+}
+

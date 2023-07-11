@@ -47,3 +47,9 @@ fi
 
 # Dotfile sync setup
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+source $HOME/.cargo/env
+source $HOME/.aliases
+
+export PATH=$PATH:$HOME/bin
+

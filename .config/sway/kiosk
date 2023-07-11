@@ -1,0 +1,27 @@
+set $mod Mod4
+
+bar {
+    position top
+    mode invisible
+}
+
+bindsym $mod+Alt+s exec waypipe --compress lz4 --video=hw --remote-bin=/home/ellen/bin/waypipe ssh 192.168.99.1 sway
+bindsym $mod+Alt+e exit
+
+# Remove window borders
+default_border none
+
+input 2:10:TPPS/2_Elan_TrackPoint {
+    pointer_accel -0.5
+}
+
+input 1739:52619:SYNA8006:00_06CB:CD8B_Mouse {
+    pointer_accel -0.2
+}
+
+input 1739:52619:SYNA8006:00_06CB:CD8B_Touchpad {
+    natural_scroll enabled
+    click_method clickfinger
+    scroll_factor 0.5
+}
+
