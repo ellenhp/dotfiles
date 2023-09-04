@@ -206,6 +206,10 @@ input 1739:52619:SYNA8006:00_06CB:CD8B_Touchpad {
     scroll_factor 0.5
 }
 
+input 1267:12679:ELAN0672:00_04F3:3187_Touchpad {
+    natural_scroll enabled
+}
+
 output HDMI-A-1 {
     transform 90
     scale 2
