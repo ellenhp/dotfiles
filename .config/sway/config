@@ -208,6 +208,7 @@ input 1739:52619:SYNA8006:00_06CB:CD8B_Touchpad {
 
 input 1267:12679:ELAN0672:00_04F3:3187_Touchpad {
     natural_scroll enabled
+    click_method clickfinger
 }
 
 output HDMI-A-1 {
