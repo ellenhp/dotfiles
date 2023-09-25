@@ -220,3 +220,6 @@ output DP-1 {
     scale 2
 }
 
+output DP-4 {
+    scale 2
+}
